@@ -9,6 +9,9 @@ function getColor() {
 
   // Changing the background color of body
   document.body.style.backgroundColor = hexColorCode;
+
+  // showing the color code on DOM
+  document.getElementById("color-code").innerText = hexColorCode;
 }
 
 // 2. Event Calling and Listening
