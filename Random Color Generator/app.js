@@ -7,3 +7,6 @@ function getColor() {
 
   //console.log(randomNumber, hexColorCode);
 }
+
+// 2. Event Calling and Listening
+document.getElementById("btn").addEventListener("click", getColor);
