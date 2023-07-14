@@ -35,14 +35,3 @@ button {
     border-radius: 10px;
 
 }
-
-footer {
-    position: absolute;
-    bottom: 5vh;
-    opacity: 70%;
-}
-
-footer:hover {
-    transition: 0.2s ease-in;
-    opacity: 100%;
-}
