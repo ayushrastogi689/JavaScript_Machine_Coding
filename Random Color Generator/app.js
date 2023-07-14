@@ -16,3 +16,7 @@ function getColor() {
 
 // 2. Event Calling and Listening
 document.getElementById("btn").addEventListener("click", getColor);
+
+// 1. Initial Call
+// Calling getColor() function for First time load 
+getColor();
