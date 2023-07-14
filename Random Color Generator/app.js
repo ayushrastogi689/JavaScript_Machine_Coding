@@ -12,6 +12,9 @@ function getColor() {
 
   // showing the color code on DOM
   document.getElementById("color-code").innerText = hexColorCode;
+
+  // Copy code to clipboard
+  navigator.clipboard.writeText(hexColorCode);
 }
 
 // 2. Event Calling and Listening
