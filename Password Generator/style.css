@@ -5,3 +5,47 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
+
+body {
+    background-color: #4285f4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.container {
+    padding: 20px;
+    width: 50%;
+    height: 25%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.container h2 {
+    font-weight: 600;
+    font-size: 1.3rem;
+    padding: 1rem 1.175rem;
+    border-bottom: 1px solid #d4dbe5;
+}
+
+.wrapper {
+    margin: 1.25rem 1.75rem;
+}
+
+.input-box input {
+    width: 95%;
+    height: 53px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #000;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    padding: 0 2.85rem 0 1rem;
+}
+
+li {
+    list-style: none;
+}
