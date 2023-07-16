@@ -51,10 +51,37 @@ body {
 }
 
 .input-box span {
+ cursor: pointer;
  position: absolute;
  right: 10%;
  line-height: 3.3rem;
 }
+
+ .wrapper .password-strength-indicator {
+    height:0.4rem ;
+    width: 100%;
+    position: relative;
+    background-color: #dfdfdf;
+    margin-top: 0.75rem;
+    border-radius: 1.5rem;
+}
+
+.password-strength-indicator::before{
+    position: absolute;
+    content: "";
+    width: 50%;
+    height: 100%;
+    border-radius: inherit;
+    background: #f1c80b;
+}
+
+.wrapper .password-length {
+    margin: 1.5rem 0 1.25rem;
+}
+
+
+
+
 
 li {
     list-style: none;
