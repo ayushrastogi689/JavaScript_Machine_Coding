@@ -21,6 +21,37 @@
                     <label for="" class="title">Password Length</label>
                     <span>15</span>
                 </div>
+                <input type="range" min="1" max="30" step="1">
+            </div>
+            <div class="password-setting">
+                <label for="" class="title">Password Settings</label>
+                <ul class="options">
+                    <li class="option">
+                        <input type="checkbox" id="lowercase">
+                        <label for="lowercase">Lowercase (a-z)</label>
+                    </li>
+                    <li class="option">
+                        <input type="checkbox" id="uppercase">
+                        <label for="uppercase">Uppercase (A-Z)</label>
+                    </li>
+                    <li class="option">
+                        <input type="checkbox" id="numbers">
+                        <label for="numbers">Numbers (0-9)</label>
+                    </li>
+                    <li class="option">
+                        <input type="checkbox" id="symbols">
+                        <label for="symbols">Symbols (!+@-#/$)</label>
+                    </li>
+                    <li class="option">
+                        <input type="checkbox" id="duplicates">
+                        <label for="duplicates">Exclude duplicates</label>
+                    </li>
+                    <li class="option">
+                        <input type="checkbox" id="spaces">
+                        <label for="spaces">Include spaces</label>
+                    </li>
+                </ul>
+            </div>
         </div>
     <script src="./app.js"></script>
 </body>
