@@ -115,6 +115,18 @@ body {
     padding-left: 0.63rem;
 }
 
+.wrapper .generate-btn {
+    width: 95%;
+    color: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: #4285f4;
+    font-size: 1.1rem;
+    padding: 0.95rem 0;
+    border-radius: 0.25rem;
+    margin: 0.95rem 0 1.3rem;
+}
 
 li {
     list-style: none;
