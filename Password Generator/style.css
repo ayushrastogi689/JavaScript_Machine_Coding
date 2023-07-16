@@ -35,6 +35,10 @@ body {
     margin: 1.25rem 1.75rem;
 }
 
+.wrapper .input-box{
+    position: relative;
+}
+
 .input-box input {
     width: 95%;
     height: 53px;
@@ -44,6 +48,12 @@ body {
     border: 1px solid #aaa;
     border-radius: 5px;
     padding: 0 2.85rem 0 1rem;
+}
+
+.input-box span {
+ position: absolute;
+ right: 10%;
+ line-height: 3.3rem;
 }
 
 li {
