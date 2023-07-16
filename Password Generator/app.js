@@ -1,5 +1,6 @@
 const lengthSlider = document.querySelector(".password-length input");
 
+const options = document.querySelectorAll(".option input");
 
 const password = document.querySelector(".generate-btn"); 
 
@@ -7,6 +8,14 @@ function updateSliderValue() {
     document.querySelector(".password-length span").innerText = lengthSlider.value;
 }
 updateSliderValue();
+
+const characters = {
+    lowercase: "abcdefghijklmnopqrstuvwxyz",
+    uppercase: "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+    numbers: "0123456789",
+    symbols: "`~!@#$%^&*(){}[]\|/:;<>,.+=?-",
+
+}
 
 function generatePassword() {
     let staticPassword = "";
