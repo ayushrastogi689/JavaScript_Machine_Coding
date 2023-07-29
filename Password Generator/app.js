@@ -4,8 +4,11 @@ const options = document.querySelectorAll(".option input");
 
 const password = document.querySelector(".generate-btn"); 
 
+const passwordGenerated = document.querySelector(".input-box input");
+
 function updateSliderValue() {
     document.querySelector(".password-length span").innerText = lengthSlider.value;
+    generatePassword();
 }
 updateSliderValue();
 
@@ -47,7 +50,8 @@ function generatePassword() {
       }
       randomPassword = randomPassword + randomChar;
     }
-    console.log(randomPassword)
+    passwordGenerated.value = randomPassword;
+    console.log(randomPassword);
 }
 
 lengthSlider.addEventListener("input", updateSliderValue);
