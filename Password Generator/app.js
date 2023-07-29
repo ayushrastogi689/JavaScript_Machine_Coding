@@ -14,7 +14,6 @@ const characters = {
     uppercase: "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
     numbers: "0123456789",
     symbols: "`~!@#$%^&*(){}[]\|/:;<>,.+=?-",
-
 }
 
 function generatePassword() {
@@ -27,24 +26,28 @@ function generatePassword() {
         // if any option is checked add that particular key value from characters object to that staticPassword
         if (option.checked)
         {
-            if (option.id !== "duplicates" && option.id !== "spaces") {
+            if (option.id !== "remove-duplicates") {
+                // adding a particular key value 
                 staticPassword = staticPassword + characters[option.id];
             }
-            else if(option.id !== "spaces"){
-                staticPassword = staticPassword + `${staticPassword}`
-            }
-            else {
-                excludeDuplicates = true;
+            else if (option.id === "remove-duplicates") {
+              excludeDuplicates = true;
+            } else {
+              staticPassword = staticPassword + `${staticPassword}`;  
             }
         }
     })
     
-    for (let i = 0; i < passwordLength; i++)
-    {
-        randomPassword = randomPassword + staticPassword[Math.floor(Math.random() * staticPassword.length)]
-        
+    while (randomPassword.length < passwordLength) {
+      //randomPassword = randomPassword + staticPassword[Math.floor(Math.random() * staticPassword.length)]
+      let randomChar = staticPassword[Math.floor(Math.random() * staticPassword.length)];
+
+      if (excludeDuplicates && randomPassword.includes(randomChar)) {
+        continue;
+      }
+      randomPassword = randomPassword + randomChar;
     }
-    
+    console.log(randomPassword)
 }
 
 lengthSlider.addEventListener("input", updateSliderValue);
