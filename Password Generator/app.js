@@ -8,6 +8,8 @@ const passwordGenerated = document.querySelector(".input-box input");
 
 const passwordStrengthIndicator = document.querySelector(".password-strength-indicator");
 
+const copyIcon = document.querySelector(".input-box span")
+
 const updatePasswordStrengthIndicator = () => {
   passwordStrengthIndicator.id = lengthSlider.value <= 8 ? "weak" : lengthSlider.value <= 16 ? "medium" : "strong";
 }
@@ -60,6 +62,16 @@ function generatePassword() {
   passwordGenerated.value = randomPassword;
   console.log(randomPassword);
 }
+
+const copyPassword = () => {
+  navigator.clipboard.writeText(passwordGenerated.value);
+  copyIcon.innerText = "check";
+  setTimeout(() => {
+    copyIcon.innerText = "copy_all"
+  }, 1000)
+}
+
+copyIcon.addEventListener("click", copyPassword)
 
 lengthSlider.addEventListener("input", updateSliderValue);
 password.addEventListener("click", generatePassword)
